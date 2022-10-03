@@ -1,0 +1,18 @@
+#Description
+
+If these policies are created without first auditing and testing the result, 
+misconfiguration can potentially lock out administrators or create undesired access issues.
+
+Conditional Access Policies can be used to block access from geographic locations that are deemed out-of-scope for your organization or application. 
+The scope and variables for this policy should be carefully examined and defined.
+
+#Rationale Statement
+Conditional Access, when used as a deny list for the tenant or subscription, 
+is able to prevent ingress or egress of traffic to countries that are outside of the scope of interest (customers, suppliers) or jurisdiction of an organization. 
+This is an effective way to prevent unnecessary and long-lasting exposure to international threats such as APTs.
+
+Impact Statement
+Azure AD Premium is required. Limiting access geographically will deny access to users that are traveling or working remotely in a different part of the world. 
+A point-to-site or site to site tunnel such as a VPN is recommended to address exceptions to geographic access policies.
+
+https://workbench.cisecurity.org/sections/1357703/recommendations/2189562
