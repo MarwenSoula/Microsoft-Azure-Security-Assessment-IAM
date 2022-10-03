@@ -1,4 +1,6 @@
-##Description 
-Security defaults in Azure Active Directory (Azure AD) make it easier to be secure and help protect your organization. Security defaults contain preconfigured security settings for common attacks.
+###Description 
 
-Microsoft is making security defaults available to everyone. The goal is to ensure that all organizations have a basic level of security enabled at no extra cost
+Security defaults in Azure Active Directory (Azure AD) make it easier to be secure and help protect your organization. 
+Security defaults contain preconfigured security settings for common attacks.
+Microsoft is making security defaults available to everyone. 
+The goal is to ensure that all organizations have a basic level of security enabled at no extra cost
