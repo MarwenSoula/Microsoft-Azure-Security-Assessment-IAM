@@ -1,0 +1,34 @@
+# Description
+
+Enable multi-factor authentication for all roles, groups, and users that have write access or permissions to Azure resources. 
+These include custom created objects or built-in roles such as:
+
+- Service Co-Administrators
+- Subscription Owners
+- Contributors
+
+# Impact Statement
+
+Users would require two forms of authentication before any access is granted.
+Additional administrative time will be required for managing dual forms of authentication when enabling multi-factor authentication.
+
+#Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select the Azure Active Directory blade
+Then Users
+All Users
+Click on the Per-User MFA button in the top row menu
+Ensure that MULTI-FACTOR AUTH STATUS is Enabled for all users who are Service Co-Administrators, Owners, OR Contributors.
+
+# Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory blade
+Then Users
+Select All Users
+Click on the Per-User MFA button in the top row menu
+Select each user individually with the role Service Co-Administrators, Owners, OR Contributors in the column MULTI-FACTOR AUTH STATUS
+In the information box on the right side under the title quick steps click enable
