@@ -1,0 +1,28 @@
+#Description
+
+For designated users, they will be prompted to use their multi-factor authentication (MFA) process on login.
+
+Enabling multi-factor authentication is a recommended setting to limit the use of Administrative accounts to authenticated personnel.
+
+Impact Statement
+There is an increased cost, as Conditional Access policies require Azure AD Premium. Similarly, 
+MFA may require additional overhead to maintain. There is also a potential scenario in which the multi-factor authentication method can be lost, 
+and administrative users are no longer able to log in. For this scenario, there should be an emergency access account. Please see References for creating this.
+
+#Audit Procedure
+From Azure Portal
+
+From Azure Home open the Portal Menu in the top left, and select Azure Active Directory.
+Scroll down in the menu on the left, and select Security.
+Select on the left side Conditional Access.
+Select the policy you wish to audit.
+View under Users and Groups the corresponding users and groups to whom the policy is applied. Be certain the emergency access account is not in the list.
+View under Exclude to determine which Users and groups to whom the policy is not applied.
+
+#Remediation Procedure
+From Azure Portal
+
+From Azure Home open the Portal Menu in top left, and select Azure Active Directory.
+Scroll down in the menu on the left, and select Security.
+Select on the left side Conditional Access.
+Click the + New policy
