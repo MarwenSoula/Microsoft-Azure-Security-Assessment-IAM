@@ -18,7 +18,7 @@ For example, doing the following:
 - Enabling security defaults may negatively impact the functionality of other Microsoft services, 
   such as MS365. This recommendation should be implemented initially and then may be overridden by other service/product specific CIS Benchmarks.
 
-#Audit Procedure
+# Audit Procedure
 From Azure Portal
 
 To ensure security defaults is enabled in your directory:
