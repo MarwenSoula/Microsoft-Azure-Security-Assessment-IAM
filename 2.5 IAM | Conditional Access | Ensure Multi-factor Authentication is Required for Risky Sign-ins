@@ -1,0 +1,25 @@
+#Description
+For designated users, they will be prompted to use their multi-factor authentication (MFA) process on login.
+
+Enabling multi-factor authentication is a recommended setting to limit the potential of accounts being compromised and limiting access to authenticated personnel.
+
+#Impact Statement
+There is an increased cost, as Conditional Access policies require Azure AD Premium. Similarly, 
+they may require additional overhead to maintain if users lose access to their MFA.
+
+#Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu and select Security.
+Select on the left side Conditional Access.
+Select the policy you wish to audit.
+View under Users and Groups the corresponding users and groups to whom the policy is applied.
+View under Exclude to determine which users and groups to whom the policy is not applied.
+
+#Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu in the top left, and select Azure Active Directory.
+Scroll down in the menu on the left, and select Security
+Select on the left side Conditional Access.
+Click the + New policy
