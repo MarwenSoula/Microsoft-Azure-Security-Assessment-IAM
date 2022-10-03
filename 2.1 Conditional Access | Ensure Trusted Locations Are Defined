@@ -1,0 +1,45 @@
+#Description
+
+
+Azure Active Directory Conditional Access allows an organization to configure Named locations and configure whether those locations are trusted or untrusted. 
+These settings provide organizations the means to specify Geographical locations for use in conditional access policies, 
+or define actual IP addresses and IP ranges and whether or not those IP addresses and/or ranges are trusted by the organization.
+Defining trusted source IP addresses or ranges helps organizations create and enforce Conditional Access policies around those trusted or untrusted IP addresses
+and ranges. Users authenticating from trusted IP addresses and/or ranges may have less access restrictions 
+or access requirements when compared to users that try to authenticate to Azure Active Directory from untrusted locations or untrusted source IP addresses/ranges.
+
+#Impact Statement
+
+When configuring Named locations, the organization can create locations using Geographical location data or by defining source IP addresses or ranges. 
+Configuring Named locations using a Country location does not provide the organization the ability to mark those locations as trusted, 
+and any Conditional Access policy relying on those Countries location setting will not be able to use the All trusted locations setting within 
+the Conditional Access policy. They instead will have to rely on the Select locations setting. 
+This may add additional resource requirements when configuring, and will require thorough organizational testing.
+
+In general, Conditional Access policies may completely prevent users from authenticating to Azure Active Directory, 
+and thorough testing is recommended. To avoid complete lockout, a 'Break Glass' account with full Global Administrator rights is recommended
+in the event all other administrators are locked out of authenticating to Azure Active Directory. 
+This 'Break Glass' account should be excluded from Conditional Access Policies and should be configured with the longest pass phrase feasible. 
+This account should only be used in the event of an emergency and complete administrator lockout.
+
+#Audit Procedure
+From Azure Portal
+
+In the Azure Portal, navigate to Azure AD Conditional Access
+Click on Named locations
+Ensure there are IP ranges location settings configured and marked as Trusted
+
+
+#Remediation Procedure
+From Azure Portal
+
+Navigate to the Azure AD Conditional Access Blade
+Click on the Named locations blade
+Within the Named locations blade, click on IP ranges location
+Enter a name for this location setting in the Name text box
+Click on the + sign
+Add an IP Address Range in CIDR notation inside the text box that appears
+Click on the Add button
+Repeat steps 5 through 7 for each IP Range that needs to be added
+If the information entered are trusted ranges, select the Mark as trusted location check box
+Once finished, click on Create
