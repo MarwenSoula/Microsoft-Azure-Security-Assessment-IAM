@@ -12,7 +12,7 @@ There may be administrative overhead, as users who lose access to their secondar
 with permissions to remove it. There will also need to be organization-wide security policies and training to teach administrators 
 to verify the identity of the requesting user so that social engineering can not render this setting useless.
 
-Audit Procedure
+#Audit Procedure
 From Azure Portal
 
 From Azure Home select the Portal Menu
@@ -23,7 +23,7 @@ Then Authentication methods
 Ensure that Number of methods required to reset is set to 2
 
 
-Remediation Procedure
+#Remediation Procedure
 From Azure Portal
 
 From Azure Home select the Portal Menu
