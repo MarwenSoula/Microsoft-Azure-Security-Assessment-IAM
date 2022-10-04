@@ -1,0 +1,41 @@
+#Description
+Azure AD is extended to include Azure AD B2B collaboration, allowing you to invite people from outside your organization to be guest users
+in your cloud account and sign in with their own work, school, or social identities. Guest users allow you to share your company's applications 
+and services with users from any other organization, while maintaining control over your own corporate data.
+
+Work with external partners, large or small, even if they don't have Azure AD or an IT department. 
+A simple invitation and redemption process lets partners use their own credentials to access your company's resources as a guest user.
+Guest users in every subscription should be review on a regular basis to ensure that inactive and unneeded accounts are removed.
+
+Guest users in the Azure AD are generally required for collaboration purposes in Office 365, 
+and may also be required for Azure functions in enterprises with multiple Azure tenants. Guest users are typically added outside your employee 
+on-boarding/off-boarding process and could potentially be overlooked indefinitely, leading to a potential vulnerability. 
+To prevent this, guest users should be reviewed on a regular basis. During this audit, guest users should also be determined to not have administrative privileges.
+
+#Impact Statement
+Before removing guest users, determine their use and scope. Like removing any user, there may be unforeseen consequences to systems if it is deleted.
+
+#Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Users and group
+Select All Users
+Click on Add filters button, select User type, click Apply, select Guest, click Apply
+Audit the listed guest users.
+
+#Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Users and group
+Select All Users
+Click on Add filters button, select User type, click Apply, select Guest, click Apply
+Delete all Guest users that are no longer required or are inactive.
+
+From Graph API
+
+GET | https://graph.microsoft.com/v1.0/users/$filter=UserType eq 'guest'
+DELETE | https://graph.microsoft.com/v1.0/users/{id}
