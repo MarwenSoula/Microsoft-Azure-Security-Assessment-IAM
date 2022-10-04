@@ -1,0 +1,35 @@
+#Description
+Do not allow users to remember multi-factor authentication on devices.
+
+Remembering Multi-Factor Authentication (MFA) for devices and browsers allows users to have the option to bypass MFA for a set number of days
+after performing a successful sign-in using MFA. This can enhance usability by minimizing the number of times 
+a user may need to perform two-step verification on the same device. However, if an account or device is compromised, 
+remembering MFA for trusted devices may affect security. Hence, it is recommended that users not be allowed to bypass MFA.
+
+# Impact Statement
+
+For every login attempt, the user will be required to perform multi-factor authentication.
+
+Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Users
+Then All Users
+Click on Multi-Factor Authentication button on the top bar
+Click on service settings
+Ensure that Allow users to remember multi-factor authentication on devices they trust is not enabled
+
+
+#Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select to Azure Active Directory
+Go to Users
+Select All Users
+Click on Multi-Factor Authentication button on the top bar
+Click on service settings
+Select Disable Allow users to remember multi-factor authentication on devices they trust
+
