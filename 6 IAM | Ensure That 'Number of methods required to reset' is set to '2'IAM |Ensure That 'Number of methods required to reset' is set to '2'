@@ -1,0 +1,34 @@
+#Description
+
+Ensures that two alternate forms of identification are provided before allowing a password reset.
+
+A Self-service Password Reset (SSPR) through Azure Multi-factor Authentication (MFA) ensures the user's identity is confirmed 
+using two separate methods of identification. With multiple methods set, an attacker would have to compromise both methods 
+before they could maliciously reset a user's password.
+
+#Impact Statement
+
+There may be administrative overhead, as users who lose access to their secondary authentication methods will need an administrator 
+with permissions to remove it. There will also need to be organization-wide security policies and training to teach administrators 
+to verify the identity of the requesting user so that social engineering can not render this setting useless.
+
+Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Users
+Select Password reset
+Then Authentication methods
+Ensure that Number of methods required to reset is set to 2
+
+
+Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Users
+Select Password reset
+Then Authentication methods
+Set the Number of methods required to reset to 2
