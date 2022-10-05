@@ -1,0 +1,25 @@
+#Description
+Restrict security group creation to administrators only.
+
+When creating security groups is enabled, all users in the directory are allowed to create new security groups and add members to those groups.
+Unless a business requires this day-to-day delegation, security group creation should be restricted to administrators only.
+
+#Impact Statement
+Enabling this setting could create a number of requests that would need to be managed by an administrator.
+
+Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Groups
+Then General in setting
+Ensure that Users can create security groups in Azure portals, API or PowerShell is set to No
+
+Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Groups
+Select General in setting
+Set Users can create security groups in Azure portals, API or PowerShell to No
