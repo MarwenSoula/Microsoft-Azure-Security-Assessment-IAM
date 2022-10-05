@@ -1,0 +1,27 @@
+#Description
+Restrict security group management to administrators only.
+
+Restricting security group management to administrators only prohibits users from making changes to security groups. 
+This ensures that security groups are appropriately managed and their management is not delegated to non-administrators.
+
+#Impact Statement
+Group Membership for user accounts will need to be handled by Admins and cause administrative overhead.
+
+#Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Groups
+Select General in settings
+Ensure that Owners can manage group membership requests in the Access Panel is set to No
+
+
+#Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Groups
+Select General in settings
+Set Owners can manage group membership requests in the Access Panel to No
