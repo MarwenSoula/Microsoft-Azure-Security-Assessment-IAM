@@ -1,0 +1,27 @@
+#Description
+Restrict Microsoft 365 group creation to administrators only.
+
+Restricting Microsoft 365 group creation to administrators only ensures that creation of Microsoft 365 groups 
+is controlled by the administrator. Appropriate groups should be created and managed by the administrator and group creation 
+rights should not be delegated to any other user.
+
+#Impact Statement
+Enabling this setting could create a number of requests that would need to be managed by an administrator.
+
+#Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Groups
+Select General in setting
+Ensure that Users can create Microsoft 365 groups in Azure portals, API or PowerShell is set to No
+
+#Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Groups
+Select General in settings
+Set Users can create Microsoft 365 groups in Azure portals, API or PowerShell to No
