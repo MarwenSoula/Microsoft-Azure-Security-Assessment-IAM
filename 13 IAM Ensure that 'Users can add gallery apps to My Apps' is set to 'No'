@@ -1,0 +1,34 @@
+#Description
+Require administrators to provide consent for the apps before use.
+
+
+Unless Azure Active Directory is running as an identity provider for third-party applications, 
+do not allow users to use their identity outside of your cloud environment. 
+User profiles contain private information such as phone numbers and email addresses which could then be sold off to other third parties without requiring 
+any further consent from the user.
+
+#Impact Statement
+Can cause additional requests to administrators that need to be fulfilled quite often.
+
+#Audit Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Users
+Select User settings
+Then Manage how end users launch and view their applications, and ensure that Users can add gallery apps to My Apps is set to No
+
+
+#Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Azure Active Directory
+Then Users
+Select User settings
+Then Manage how end users launch and view their applications
+Set Users can add gallery apps to My Apps to No
+Default Value
+By default, Users can add gallery apps to My Apps is set to No.
+
