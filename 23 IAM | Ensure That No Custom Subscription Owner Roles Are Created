@@ -1,0 +1,35 @@
+#Description
+Subscription ownership should not include permission to create custom owner roles. 
+The principle of least privilege should be followed and only necessary privileges should be assigned instead of allowing full administrative access.
+
+Classic subscription admin roles offer basic access management and include Account Administrator, 
+Service Administrator, and Co-Administrators. It is recommended the least necessary permissions be given initially. 
+Permissions can be added as needed by the account holder. This ensures the account holder cannot perform actions which were not intended.
+
+#Impact Statement
+Subscriptions will need to be handled by Administrators with permissions.
+
+#Audit Procedure
+From Azure Portal
+
+From Azure Home select Subscriptions under Navigate
+From Azure Home select the Portal Menu
+Select in the left column Access control (IAM)
+In the row select of filters Role:, then the # Displayed
+In the list of checkmarks deselect Show all to display no roles.
+Search for Owner or select it if it already displayed to show only users with the Owner role
+Audit this list for accounts with the Owner Role.
+
+
+#Remediation Procedure
+From Azure Portal
+
+From Azure Home select the Portal Menu
+Select Subscriptions under Navigate
+Select in the left column Access control (IAM)
+In the row select of filters Role:, then the # Displayed
+In the list of checkmarks deselect 'Show all' to display no roles.
+Search for Owner or select it if it already displayed to show only users with the Owner role
+To remove this permission from a user, select the checkbox under the Owner
+In the top row, select Remove X
+Select Yes
