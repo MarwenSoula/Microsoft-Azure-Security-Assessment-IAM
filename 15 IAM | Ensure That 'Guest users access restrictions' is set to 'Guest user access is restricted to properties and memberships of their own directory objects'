@@ -14,7 +14,7 @@ The recommended option is the 3rd, most restrictive: "Guest user access is restr
 
 This may create additional requests for permissions to access resources that administrators will need to approve.
 
-Audit Procedure
+#Audit Procedure
 From Azure Portal
 
 From Azure Home select the Portal Menu
@@ -24,11 +24,12 @@ Select External collaboration settings
 Under Guest user access, ensure that Guest user access restrictions is set to Guest user access 
 is restricted to properties and memberships of their own directory objects
 
-Remediation Procedure
+#Remediation Procedure
 From Azure Portal
 
 From Azure Home select the Portal Menu
 Select Azure Active Directory
 Then External Identities
 Select External collaboration settings
-Under Guest user access, change Guest user access restrictions to be Guest user access is restricted to properties and memberships of their own directory objects
+Under Guest user access, change Guest user access restrictions to be Guest user access is restricted to properties 
+and memberships of their own directory objects.
